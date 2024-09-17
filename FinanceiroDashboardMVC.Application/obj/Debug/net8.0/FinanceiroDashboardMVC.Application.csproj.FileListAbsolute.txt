@@ -1,0 +1,15 @@
+C:\Users\vitor\Desktop\FinanceiroDashboardMVC\FinanceiroDashboardMVC.Application\bin\Debug\net8.0\FinanceiroDashboardMVC.Application.deps.json
+C:\Users\vitor\Desktop\FinanceiroDashboardMVC\FinanceiroDashboardMVC.Application\bin\Debug\net8.0\FinanceiroDashboardMVC.Application.dll
+C:\Users\vitor\Desktop\FinanceiroDashboardMVC\FinanceiroDashboardMVC.Application\bin\Debug\net8.0\FinanceiroDashboardMVC.Application.pdb
+C:\Users\vitor\Desktop\FinanceiroDashboardMVC\FinanceiroDashboardMVC.Application\bin\Debug\net8.0\FinanceiroDashboardMVC.Domain.dll
+C:\Users\vitor\Desktop\FinanceiroDashboardMVC\FinanceiroDashboardMVC.Application\bin\Debug\net8.0\FinanceiroDashboardMVC.Domain.pdb
+C:\Users\vitor\Desktop\FinanceiroDashboardMVC\FinanceiroDashboardMVC.Application\obj\Debug\net8.0\FinanceiroDashboardMVC.Application.csproj.AssemblyReference.cache
+C:\Users\vitor\Desktop\FinanceiroDashboardMVC\FinanceiroDashboardMVC.Application\obj\Debug\net8.0\FinanceiroDashboardMVC.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vitor\Desktop\FinanceiroDashboardMVC\FinanceiroDashboardMVC.Application\obj\Debug\net8.0\FinanceiroDashboardMVC.Application.AssemblyInfoInputs.cache
+C:\Users\vitor\Desktop\FinanceiroDashboardMVC\FinanceiroDashboardMVC.Application\obj\Debug\net8.0\FinanceiroDashboardMVC.Application.AssemblyInfo.cs
+C:\Users\vitor\Desktop\FinanceiroDashboardMVC\FinanceiroDashboardMVC.Application\obj\Debug\net8.0\FinanceiroDashboardMVC.Application.csproj.CoreCompileInputs.cache
+C:\Users\vitor\Desktop\FinanceiroDashboardMVC\FinanceiroDashboardMVC.Application\obj\Debug\net8.0\Financei.30C96202.Up2Date
+C:\Users\vitor\Desktop\FinanceiroDashboardMVC\FinanceiroDashboardMVC.Application\obj\Debug\net8.0\FinanceiroDashboardMVC.Application.dll
+C:\Users\vitor\Desktop\FinanceiroDashboardMVC\FinanceiroDashboardMVC.Application\obj\Debug\net8.0\refint\FinanceiroDashboardMVC.Application.dll
+C:\Users\vitor\Desktop\FinanceiroDashboardMVC\FinanceiroDashboardMVC.Application\obj\Debug\net8.0\FinanceiroDashboardMVC.Application.pdb
+C:\Users\vitor\Desktop\FinanceiroDashboardMVC\FinanceiroDashboardMVC.Application\obj\Debug\net8.0\ref\FinanceiroDashboardMVC.Application.dll

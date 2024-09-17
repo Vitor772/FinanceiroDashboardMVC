@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\FinanceiroDashboardMVC.Presentation.props" />
+</Project>

@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - Dashboard Financeira</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+<body>
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            Financeiro
+        </div>
+        <ul class="components">
+            <li><a href="/Dashboard/Index"><i class="fas fa-tachometer-alt"></i><span class="link-text"> Dashboard</span></a></li>
+            <li><a href="/NotaFiscal/Index"><i class="fas fa-file-invoice"></i><span class="link-text"> Notas Fiscais</span></a></li>
+        </ul>
+
+    </nav>
+     @RenderBody()
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="~/js/site.js"></script>
+
+    @RenderSection("Scripts", false)
+
+
+</body>
+</html>

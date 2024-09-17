@@ -1,0 +1,11 @@
+C:\Users\vitor\Desktop\FinanceiroDashboardMVC\FinanceiroDashboardMVC.Domain\bin\Debug\net8.0\FinanceiroDashboardMVC.Domain.deps.json
+C:\Users\vitor\Desktop\FinanceiroDashboardMVC\FinanceiroDashboardMVC.Domain\bin\Debug\net8.0\FinanceiroDashboardMVC.Domain.dll
+C:\Users\vitor\Desktop\FinanceiroDashboardMVC\FinanceiroDashboardMVC.Domain\bin\Debug\net8.0\FinanceiroDashboardMVC.Domain.pdb
+C:\Users\vitor\Desktop\FinanceiroDashboardMVC\FinanceiroDashboardMVC.Domain\obj\Debug\net8.0\FinanceiroDashboardMVC.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vitor\Desktop\FinanceiroDashboardMVC\FinanceiroDashboardMVC.Domain\obj\Debug\net8.0\FinanceiroDashboardMVC.Domain.AssemblyInfoInputs.cache
+C:\Users\vitor\Desktop\FinanceiroDashboardMVC\FinanceiroDashboardMVC.Domain\obj\Debug\net8.0\FinanceiroDashboardMVC.Domain.AssemblyInfo.cs
+C:\Users\vitor\Desktop\FinanceiroDashboardMVC\FinanceiroDashboardMVC.Domain\obj\Debug\net8.0\FinanceiroDashboardMVC.Domain.csproj.CoreCompileInputs.cache
+C:\Users\vitor\Desktop\FinanceiroDashboardMVC\FinanceiroDashboardMVC.Domain\obj\Debug\net8.0\FinanceiroDashboardMVC.Domain.dll
+C:\Users\vitor\Desktop\FinanceiroDashboardMVC\FinanceiroDashboardMVC.Domain\obj\Debug\net8.0\refint\FinanceiroDashboardMVC.Domain.dll
+C:\Users\vitor\Desktop\FinanceiroDashboardMVC\FinanceiroDashboardMVC.Domain\obj\Debug\net8.0\FinanceiroDashboardMVC.Domain.pdb
+C:\Users\vitor\Desktop\FinanceiroDashboardMVC\FinanceiroDashboardMVC.Domain\obj\Debug\net8.0\ref\FinanceiroDashboardMVC.Domain.dll

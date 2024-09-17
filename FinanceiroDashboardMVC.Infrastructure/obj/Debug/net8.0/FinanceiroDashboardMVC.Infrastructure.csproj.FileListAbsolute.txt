@@ -1,0 +1,17 @@
+C:\Users\vitor\Desktop\FinanceiroDashboardMVC\FinanceiroDashboardMVC.Infrastructure\bin\Debug\net8.0\FinanceiroDashboardMVC.Infrastructure.deps.json
+C:\Users\vitor\Desktop\FinanceiroDashboardMVC\FinanceiroDashboardMVC.Infrastructure\bin\Debug\net8.0\FinanceiroDashboardMVC.Infrastructure.runtimeconfig.json
+C:\Users\vitor\Desktop\FinanceiroDashboardMVC\FinanceiroDashboardMVC.Infrastructure\bin\Debug\net8.0\FinanceiroDashboardMVC.Infrastructure.dll
+C:\Users\vitor\Desktop\FinanceiroDashboardMVC\FinanceiroDashboardMVC.Infrastructure\bin\Debug\net8.0\FinanceiroDashboardMVC.Infrastructure.pdb
+C:\Users\vitor\Desktop\FinanceiroDashboardMVC\FinanceiroDashboardMVC.Infrastructure\bin\Debug\net8.0\FinanceiroDashboardMVC.Domain.dll
+C:\Users\vitor\Desktop\FinanceiroDashboardMVC\FinanceiroDashboardMVC.Infrastructure\bin\Debug\net8.0\FinanceiroDashboardMVC.Domain.pdb
+C:\Users\vitor\Desktop\FinanceiroDashboardMVC\FinanceiroDashboardMVC.Infrastructure\obj\Debug\net8.0\FinanceiroDashboardMVC.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\vitor\Desktop\FinanceiroDashboardMVC\FinanceiroDashboardMVC.Infrastructure\obj\Debug\net8.0\FinanceiroDashboardMVC.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vitor\Desktop\FinanceiroDashboardMVC\FinanceiroDashboardMVC.Infrastructure\obj\Debug\net8.0\FinanceiroDashboardMVC.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\vitor\Desktop\FinanceiroDashboardMVC\FinanceiroDashboardMVC.Infrastructure\obj\Debug\net8.0\FinanceiroDashboardMVC.Infrastructure.AssemblyInfo.cs
+C:\Users\vitor\Desktop\FinanceiroDashboardMVC\FinanceiroDashboardMVC.Infrastructure\obj\Debug\net8.0\FinanceiroDashboardMVC.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\vitor\Desktop\FinanceiroDashboardMVC\FinanceiroDashboardMVC.Infrastructure\obj\Debug\net8.0\Financei.FF5A2F67.Up2Date
+C:\Users\vitor\Desktop\FinanceiroDashboardMVC\FinanceiroDashboardMVC.Infrastructure\obj\Debug\net8.0\FinanceiroDashboardMVC.Infrastructure.dll
+C:\Users\vitor\Desktop\FinanceiroDashboardMVC\FinanceiroDashboardMVC.Infrastructure\obj\Debug\net8.0\refint\FinanceiroDashboardMVC.Infrastructure.dll
+C:\Users\vitor\Desktop\FinanceiroDashboardMVC\FinanceiroDashboardMVC.Infrastructure\obj\Debug\net8.0\FinanceiroDashboardMVC.Infrastructure.pdb
+C:\Users\vitor\Desktop\FinanceiroDashboardMVC\FinanceiroDashboardMVC.Infrastructure\obj\Debug\net8.0\FinanceiroDashboardMVC.Infrastructure.genruntimeconfig.cache
+C:\Users\vitor\Desktop\FinanceiroDashboardMVC\FinanceiroDashboardMVC.Infrastructure\obj\Debug\net8.0\ref\FinanceiroDashboardMVC.Infrastructure.dll

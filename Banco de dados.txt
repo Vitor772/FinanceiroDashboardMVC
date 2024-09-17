@@ -1,0 +1,1 @@
+Entre na camada de presentation e execute os comandos para inserir o banco de dados para o entity framework

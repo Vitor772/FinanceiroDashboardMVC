@@ -1,0 +1,97 @@
+﻿@model IEnumerable<FinanceiroDashboardMVC.Domain.Entities.NotaFiscal>
+
+@{
+    ViewData["Title"] = "Lista de Notas Fiscais";
+}
+
+<div id="content">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button type="button" id="sidebarCollapse" class="btn-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <h4 class="ml-3 mb-0">Dashboard Financeira</h4>
+    </nav>
+
+    <div class="container-fluid mt-4">
+        <form method="get" class="mb-4">
+            <div class="row">
+                <div class="col-md-3">
+                    <label>Mês de Emissão</label>
+                    <input type="month" name="filtroMesEmissao" class="form-control" value="@ViewBag.FiltroMesEmissao" />
+                </div>
+                <div class="col-md-3">
+                    <label>Mês de Cobrança</label>
+                    <input type="month" name="filtroMesCobranca" class="form-control" value="@ViewBag.FiltroMesCobranca" />
+                </div>
+                <div class="col-md-3">
+                    <label>Mês de Pagamento</label>
+                    <input type="month" name="filtroMesPagamento" class="form-control" value="@ViewBag.FiltroMesPagamento" />
+                </div>
+                <div class="col-md-3">
+                    <label>Status</label>
+                    <select name="filtroStatus" class="form-control">
+                        < value="">Todos</>
+                        < value="emitida" @(ViewBag.FiltroStatus == "emitida" ? "selected" : "")>Emitida</>
+                        < value="cobranca_realizada" @(ViewBag.FiltroStatus == "cobranca_realizada" ? "selected" : "")>Cobrança Realizada</>
+                        < value="pagamento_em_atraso" @(ViewBag.FiltroStatus == "pagamento_em_atraso" ? "selected" : "")>Pagamento em Atraso</>
+                        < value="pagamento_realizado" @(ViewBag.FiltroStatus == "pagamento_realizado" ? "selected" : "")>Pagamento Realizado</>
+                    </select>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-12">
+                    <button type="submit" class="btn btn-primary">Filtrar</button>
+                    <a asp-action="Create" class="btn btn-success ml-3">Criar Nova Nota Fiscal</a>
+                </div>
+            </div>
+        </form>
+
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Descrição</th>
+                        <th>Categoria</th>
+                        <th>Valor</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Data.ToString("dd/MM/yyyy")</td>
+                            <td>@item.Descricao</td>
+                            <td>@item.Categoria</td>
+                            <td>R$ @item.Valor.ToString("N2")</td>
+                            <td>
+                                @switch (item.Status)
+                                {
+                                    case "emitida":
+                                        <span class="badge badge-primary">Emitida</span>
+                                        break;
+                                    case "cobranca_realizada":
+                                        <span class="badge badge-warning">Cobrança Realizada</span>
+                                        break;
+                                    case "pagamento_em_atraso":
+                                        <span class="badge badge-danger">Pagamento em Atraso</span>
+                                        break;
+                                    case "pagamento_realizado":
+                                        <span class="badge badge-success">Pagamento Realizado</span>
+                                        break;
+                                }
+                            </td>
+                            <td>
+                                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning btn-sm">Editar</a>
+                                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info btn-sm">Detalhes</a>
+                                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm" onclick="return confirm('Tem certeza que deseja excluir esta nota fiscal?');">Excluir</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,94 @@
+#sidebar {
+    height: 100vh;
+    background-color: #ff69b4; /* Cor rosa */
+    color: white;
+    padding: 15px;
+    position: fixed;
+    width: 250px;
+    transition: width 0.3s;
+    overflow: hidden; /* Oculta o conteúdo fora do tamanho ajustado */
+}
+
+    #sidebar.active {
+        width: 80px;
+    }
+
+    #sidebar .sidebar-header {
+        font-size: 1.5em;
+        text-align: center;
+        padding: 20px;
+        background-color: #ff1493; /* Rosa mais escuro para o cabeçalho */
+    }
+
+    #sidebar ul.components {
+        padding: 0;
+        list-style: none;
+    }
+
+    #sidebar ul li {
+        padding: 10px;
+        font-size: 1.2em;
+        display: flex;
+        align-items: center;
+    }
+
+        #sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            white-space: nowrap;
+            transition: all 0.3s;
+        }
+
+            #sidebar ul li a .link-text {
+                margin-left: 10px;
+                transition: opacity 0.3s, margin-left 0.3s;
+            }
+
+    /* Esconde o texto dos links no sidebar quando colapsado */
+    #sidebar.active ul li a .link-text {
+        display: none;
+    }
+
+    /* Esconde o título "Dashboard Financeira" quando o sidebar está colapsado */
+    #sidebar.active ~ #content .navbar h4 {
+        display: none;
+    }
+
+/* Estilos do conteúdo principal */
+#content {
+    margin-left: 250px;
+    padding: 20px;
+    transition: margin-left 0.3s;
+}
+
+#sidebar.active ~ #content {
+    margin-left: 80px;
+}
+
+/* Barra de Navegação Superior */
+.navbar {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    padding: 1rem;
+}
+
+    .navbar .btn-toggle {
+        background: none;
+        border: none;
+        color: #2f3542;
+        font-size: 24px;
+        outline: none;
+    }
+
+/* Cartões */
+.card {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+    .card h5 {
+        font-weight: 600;
+    }

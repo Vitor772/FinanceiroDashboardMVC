@@ -1,0 +1,225 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard Financeira Avançada</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <div id="content">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button type="button" id="sidebarCollapse" class="btn-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <h4 class="ml-3 mb-0">Dashboard Financeira</h4>
+        </nav>
+
+        <div class="container-fluid">
+            <div class="row mt-4">
+                <div class="col-md-2">
+                    <div class="card text-white bg-info">
+                        <div class="card-body">
+                            <h5 class="card-title">Valor Total Notas</h5>
+                            <p class="card-text">R$ @ViewBag.TotalValorEmitidas.ToString("N2")</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="card text-white bg-secondary">
+                        <div class="card-body">
+                            <h5 class="card-title">Sem Cobrança</h5>
+                            <p class="card-text">R$ @ViewBag.TotalValorSemCobranca.ToString("N2")</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cartão Inadimplência -->
+                <div class="col-md-2">
+                    <div class="card text-white bg-danger">
+                        <div class="card-body">
+                            <h5 class="card-title">Inadimplência</h5>
+                            <p class="card-text">R$ @ViewBag.TotalValorInadimplencia.ToString("N2")</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cartão A Vencer -->
+                <div class="col-md-2">
+                    <div class="card text-white bg-warning">
+                        <div class="card-body">
+                            <h5 class="card-title">A Vencer</h5>
+                            <p class="card-text">R$ @ViewBag.TotalValorAVencer.ToString("N2")</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cartão Pagas -->
+                <div class="col-md-2">
+                    <div class="card text-white bg-success">
+                        <div class="card-body">
+                            <h5 class="card-title">Pagas</h5>
+                            <p class="card-text">R$ @ViewBag.TotalValorPagas.ToString("N2")</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filtros de Período -->
+            <div class="row mb-4">
+                <div class="col-md-4">
+                    <select id="periodSelect" class="form-control">
+                        <option value="month">Mês</option>
+                        <option value="quarter">Trimestre</option>
+                        <option value="year">Ano</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Gráficos -->
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Evolução da Inadimplência</h5>
+                            <div class="chart-container">
+                                <canvas id="inadimplenciaChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Evolução da Receita Recebida</h5>
+                            <div class="chart-container">
+                                <canvas id="receitaChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabela de Notas Fiscais -->
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Últimas Notas Fiscais</h5>
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Data</th>
+                                            <th>Descrição</th>
+                                            <th>Categoria</th>
+                                            <th>Valor</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var nota in Model)
+                                        {
+                                            <tr>
+                                                <td>@nota.Data.ToString("dd/MM/yyyy")</td>
+                                                <td>@nota.Descricao</td>
+                                                <td>@nota.Categoria</td>
+                                                <td>R$ @nota.Valor.ToString("N2")</td>
+                                                <td>
+                                                    @switch (nota.Status)
+                                                    {
+                                                        case "emitida":
+                                                            <span class="badge badge-primary">Emitida</span>
+                                                            break;
+                                                        case "cobranca_realizada":
+                                                            <span class="badge badge-warning">Cobrança Realizada</span>
+                                                            break;
+                                                        case "pagamento_em_atraso":
+                                                            <span class="badge badge-danger">Pagamento em Atraso</span>
+                                                            break;
+                                                        case "pagamento_realizado":
+                                                            <span class="badge badge-success">Pagamento Realizado</span>
+                                                            break;
+                                                    }
+                                                </td>
+                                               
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            // Dados reais da ViewBag
+            var receitaTotal = @ViewBag.ReceitaTotal;
+            var inadimplenciaTotal = @ViewBag.InadimplenciaTotal;
+
+            // Gráfico de Inadimplência
+            var ctxInadimplencia = document.getElementById('inadimplenciaChart').getContext('2d');
+            new Chart(ctxInadimplencia, {
+                type: 'line',
+                data: {
+                    labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],  // Ajuste essas labels de acordo com a lógica do seu sistema
+                    datasets: [{
+                        label: 'Inadimplência',
+                        data: [inadimplenciaTotal],  // Use os valores reais
+                        borderColor: 'rgba(220,53,69,1)',
+                        backgroundColor: 'rgba(220,53,69,0.2)',
+                        fill: true,
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+
+            // Gráfico de Receita (Pagas)
+            var ctxReceita = document.getElementById('receitaChart').getContext('2d');
+            new Chart(ctxReceita, {
+                type: 'bar',
+                data: {
+                    labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],  // Ajuste essas labels de acordo com a lógica do seu sistema
+                    datasets: [{
+                        label: 'Receita Recebida (Pagas)',
+                        data: [receitaTotal],  // Use os valores reais
+                        backgroundColor: 'rgba(40,167,69,0.6)',
+                        borderColor: 'rgba(40,167,69,1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        });
+
+        // Toggle Sidebar
+        $('#sidebarCollapse').on('click', function () {
+            $('#sidebar').toggleClass('active');
+        });
+    </script>
+
+</body>
+</html>
